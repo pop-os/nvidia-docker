@@ -1,7 +1,7 @@
 Source: nvidia-docker2
-Section: @SECTION@utils
+Section: utils
 Priority: optional
-Maintainer: NVIDIA CORPORATION <cudatools@nvidia.com>
+Maintainer: Michael Murphy <mmstick@pm.me>
 Standards-Version: 3.9.8
 Homepage: https://github.com/NVIDIA/nvidia-docker/wiki
 Vcs-Git: https://github.com/NVIDIA/nvidia-docker
@@ -11,7 +11,8 @@ Build-Depends: debhelper (>= 9)
 Package: nvidia-docker2
 Architecture: all
 Breaks: nvidia-docker (<< 2.0.0)
-Replaces: nvidia-docker (<< 2.0.0)
-Depends: ${misc:Depends}, nvidia-container-toolkit (>= @TOOLKIT_VERSION@), @DOCKER_VERSION@
+Replaces: nvidia-docker (<< 2.0.0), nvidia-container-runtime
+Conflicts: nvidia-container-runtime
+Depends: ${misc:Depends}, nvidia-container-toolkit (>= 1.7.0-1~), docker.io | docker-ce
 Description: nvidia-docker CLI wrapper
  Replaces nvidia-docker with a new implementation based on the NVIDIA Container Toolkit

@@ -3,5 +3,17 @@
 
 #export DH_VERBOSE=1
 
+export LIB_VERSION=2.11.0
+export DESTDIR=debian/tmp
+
 %:
 	dh $@
+
+override_dh_auto_build:
+
+override_dh_auto_install:
+	mkdir -p ${DESTDIR}
+	cp nvidia-docker ${DESTDIR}
+	cp daemon.json ${DESTDIR}
+	sed -i "s;@VERSION@;${LIB_VERSION};" ${DESTDIR}/nvidia-docker
+
