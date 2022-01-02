@@ -1,0 +1,11 @@
+nvidia-docker2 (2.9.0-1) impish; urgency=medium
+
+  * Update 
+
+ -- Michael Aaron Murphy <mmstick@pm.me>  Mon, 07 Feb 2022 20:11:58 +0100
+
+nvidia-docker2 (2.8.0-1) impish; urgency=medium
+
+  * Initial release.
+
+ -- Michael Aaron Murphy <mmstick@pm.me>  Sun, 02 Jan 2022 14:48:21 +0100
